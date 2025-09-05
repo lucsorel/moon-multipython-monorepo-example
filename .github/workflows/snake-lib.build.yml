@@ -3,8 +3,11 @@ name: 'build snake-lib'
 on:
   push:
     paths:
-      - 'snake-lib/**'
       - '.github/workflows/snake-lib.build.yml'
+      - '.prototools'
+      - '.moon/**'
+      - 'moon.yml'
+      - 'snake-lib/**'
 
 jobs:
   tests:
