@@ -5,8 +5,24 @@ layer: 'library'
 language: 'python'
 stack: 'backend'
 
+fileGroups:
+  configs:
+    - '.python-version'
+    - '.prototools'
+    - 'moon.yml'
+    - 'pyproject.toml'
+    - 'uv.lock'
+  sources:
+    - 'snake_lib/**/*'
+  tests:
+    - 'tests/**/*'
+
 tasks:
   test:
     command: 'uv run pytest -v'
+    inputs:
+      - '@files(configs)'
+      - '@globs(sources)'
+      - '@globs(tests)'
     deps:
       - '^:install'
