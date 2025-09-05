@@ -1,0 +1,9 @@
+# https://moonrepo.dev/docs/config/toolchain
+$schema: 'https://moonrepo.dev/schemas/toolchain.json'
+
+# version used by the CI Github action
+proto:
+  version: '0.52.3'
+
+python:
+  packageManager: 'uv'

@@ -1,0 +1,19 @@
+# https://moonrepo.dev/docs/config/workspace
+$schema: 'https://moonrepo.dev/schemas/workspace.json'
+
+projects:
+  root: '.'
+  snakeLib: 'snake-lib'
+
+vcs:
+  manager: 'git'
+  provider: 'github'
+  defaultBranch: 'main'
+
+  # hooks:
+  #   pre-commit:
+  #     - 'uv run pre-commit run'
+  #   # unfortunately, the commit-msg hook does not work as such
+  #   commit-msg:
+  #     - 'uv run pre-commit run'
+  # syncHooks: true

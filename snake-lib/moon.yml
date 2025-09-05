@@ -1,0 +1,12 @@
+# https://moonrepo.dev/docs/config/project
+$schema: "https://moonrepo.dev/schemas/project.json"
+
+layer: 'library'
+language: 'python'
+stack: 'backend'
+
+tasks:
+  test:
+    command: 'uv run pytest -v'
+    deps:
+      - '^:install'
