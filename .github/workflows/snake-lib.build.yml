@@ -24,4 +24,6 @@ jobs:
           auto-install: true
 
       - name: continuous integration
-        run: moon ci
+        run: |
+          moon ci
+          moon run snakeLib:test
