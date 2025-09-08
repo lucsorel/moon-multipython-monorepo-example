@@ -25,4 +25,6 @@ jobs:
           auto-setup: true
 
       - name: continuous integration
-        run: moon ci
+        run: |
+          moon ci
+          moon run root:lint-all
