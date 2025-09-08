@@ -10,10 +10,10 @@ vcs:
   provider: 'github'
   defaultBranch: 'main'
 
-  # hooks:
-  #   pre-commit:
-  #     - 'uv run pre-commit run'
-  #   # unfortunately, the commit-msg hook does not work as such
-  #   commit-msg:
-  #     - 'uv run pre-commit run'
-  # syncHooks: true
+  hooks:
+    pre-commit:
+      - 'uv run pre-commit run'
+    # unfortunately, the commit-msg hook does not work as such
+    commit-msg:
+      - 'uv run pre-commit run'
+  syncHooks: true
