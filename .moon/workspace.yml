@@ -13,7 +13,6 @@ vcs:
   hooks:
     pre-commit:
       - 'uv run pre-commit run'
-    # unfortunately, the commit-msg hook does not work as such
     commit-msg:
-      - 'uv run pre-commit run'
+      - 'uv run pre-commit run --hook-stage commit-msg --commit-msg-filename $1'
   syncHooks: true
