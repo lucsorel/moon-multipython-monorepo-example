@@ -2,12 +2,13 @@ language: 'python'
 
 tasks:
   # we rely completely on the pre-commit tool because we failed to write the moon's commit-msg hook
-  lint-install:
+  install-hooks:
     command: 'uv run pre-commit install -f'
-    options:
-      runInCI: false
+    local: true
 
   lint-all:
     command: 'uv run pre-commit run --all-files'
-    deps:
-      - '^:install'
+    # deps:
+    #   - '^:install'
+    options:
+      runInCI: true

@@ -3,5 +3,5 @@ uv = "0.8.10"
 [tools.python]
 backend = "uv"
 
-# [settings]
-# auto-install = true
+[settings]
+auto-install = true
