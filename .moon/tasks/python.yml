@@ -1,5 +1,0 @@
-tasks:
-  install:
-    script: 'proto install python && proto install uv'
-    inputs:
-      - '.venv/pyvenv.cfg'

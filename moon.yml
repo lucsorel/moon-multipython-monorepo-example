@@ -4,4 +4,5 @@ tasks:
   lint-all:
     command: 'uv run pre-commit run --all-files'
     options:
-      runInCI: true
+      runInCI: 'always'
+      cache: false

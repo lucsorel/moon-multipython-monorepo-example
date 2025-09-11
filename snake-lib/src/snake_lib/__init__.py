@@ -1,2 +1,2 @@
 def hello() -> str:
-    return "Hello from snake-lib! :)"
+    return "Hello from snake-lib!"
