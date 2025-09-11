@@ -12,14 +12,7 @@ vcs:
 
   hooks:
     pre-commit:
-      - 'uv run pre-commit run'
+      - 'uv run pre-commit run $@'
     commit-msg:
-      - 'echo --% >/dev/null;: '' | out-null'
-      - 'uv run pre-commit run --hook-stage commit-msg --commit-msg-filename $1'
-      - '<#'''
-      - '# unix-like shells'
-      - 'exit $? #>'
-      - '# powershell'
-      - 'uv run pre-commit run --hook-stage commit-msg --commit-msg-filename $args[1]'
-
+      - 'uv run pre-commit run --hook-stage commit-msg --commit-msg-filename $@'
   syncHooks: true
