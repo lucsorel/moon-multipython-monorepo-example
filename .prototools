@@ -1,8 +1,5 @@
-moon = "1.40.2"
+moon = "latest"
 uv = "latest"
 
 [tools.python]
 backend = "uv"
-
-[settings]
-auto-install = true
